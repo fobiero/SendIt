@@ -1,7 +1,80 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
-<div class="container">
-    <p>homePage</p>
+<div class="hero-section p-4" style="align-items: center;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="main-tle">Just place <br>we help you deliver</h1>
+                <p class="main-desc">
+                    We bring together everything thst's required for <br> E-commerce and Customer brands to ship goods to <br> customers and retailers across Africa and thus to making <br> trade easier.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <div class="hero-banner">
+                    <img src="{% static 'images/hero/delivery.gif' %}" alt="" width="350px" height="300px">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- end-hero  -->
+<section class="service">
+    <div class="serv-info text-center">
+        <h1 class="h-tle">what we do</h1>
+        <p class="h-desc">We're helping online businesses grow and do more </p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sell-info">
+                    <div class="serv-img">
+                        <img src="{% static 'images/products/sell-1.png' %}" alt="">
+                    </div>
+                    <div class="serv-cont">
+                        <h3 class="ser-tle">Sell</h3>
+                        <p class="serv-desc">Focus on makin more sales <br> while we pick,pack & deliver <br>all your products.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end sell  -->
+            <div class="col-md-3">
+                <div class="sell-info">
+                    <div class="serv-img">
+                        <img src="{% static 'images/products/grow.png' %}" alt="">
+                    </div>
+                    <div class="serv-cont">
+                        <h3 class="ser-tle">Growth</h3>
+                        <p class="serv-desc">Increae your sales and scale<br> your business without <br> compromising quality of your <br>customers' experience.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end growth  -->
+            <div class="col-md-3">
+                <div class="sell-info">
+                    <div class="serv-img">
+                        <img src="{% static 'images/products/profits.png' %}" alt="">
+                    </div>
+                    <div class="serv-cont">
+                        <h3 class="ser-tle">Financing</h3>
+                        <p class="serv-desc">You have access to fast, flexible<br> financing so you can buy more <br> stocks and manage cash flows.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end financing  -->
+            <div class="col-md-3">
+                <div class="sell-info">
+                    <div class="serv-img">
+                        <img src="{% static 'images/products/trust.png' %}" alt="">
+                    </div>
+                    <div class="serv-cont">
+                        <h3 class="ser-tle">Trust</h3>
+                        <p class="serv-desc">through reliable smooth<br> deliveries resulting in positive<br> experiences, return customers <br>and great relationships.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end trust  -->
+        </div>
+    </div>
+</section>
 
 {% endblock content %}
