@@ -1,3 +1,34 @@
 from django.db import models
 
 # Create your models here.
+
+class Customer(models.Model):
+    sender_fname = models.CharField(max_length=200)
+    sender_lname = models.CharField(max_length=200)
+    sender_contact = models.CharField(max_length=200)
+    LOCATION_CHOICES = (('Nairobi', 'Nairobi'), ('Mombasa', 'Mombasa'), ('Kisumu', 'Kisumu'), ('Embu', 'Embu'), ('Nakuru', 'Nakuru'))
+    sender_location = models.CharField(max_length=100, choices=LOCATION_CHOICES)
+    parcel_description = models.CharField(max_length=200)
+    WEIGHT_CHOICES = (('0-1 kgs', '0-1 kgs'), ('S', '2-5 kgs'), ('T', '6-10 kgs'))
+    parcel_weight = models.CharField(max_length=100, choices=WEIGHT_CHOICES)
+    receipient_fname = models.CharField(max_length=200)
+    receipient_lname = models.CharField(max_length=200)
+    receipient_contact = models.CharField(max_length=200)
+    receipient_location = models.CharField(max_length=100, choices=LOCATION_CHOICES)
+    
+    def __str_(self):
+        return self.first_name + ' ' + self.last_name
+
+class Sender(models.Model):
+    sender_name = models.CharField(max_length=200)
+
+    def __str_(self):
+        return self
+
+class newdestination(models.Model):
+    LOCATION_CHOICES = (('N', 'Nairobi'), ('M', 'Mombasa'), ('K', 'Kisumu'), ('E', 'Embu'), ('N', 'Nakuru'))
+    new_location = models.CharField(max_length=1, choices=LOCATION_CHOICES)
+
+    def __str_(self):
+        return self
+
