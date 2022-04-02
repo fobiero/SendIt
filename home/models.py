@@ -12,11 +12,6 @@ class Customer(models.Model):
     receipient_contact = models.CharField(max_length=200)
     PACKAGE_CHOICES = (('Small', 'Small'), ('Large', 'Large'))
     parcel_package = models.CharField(max_length=100, choices=PACKAGE_CHOICES)
-
-    # sender_fname = models.CharField(max_length=200)
-    # sender_lname = models.CharField(max_length=200)
-    # parcel_description = models.CharField(max_length=200)
-    # receipient_fname = models.CharField(max_length=200)
     
     def __str_(self):
         return self.first_name + ' ' + self.last_name
