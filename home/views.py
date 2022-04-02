@@ -49,17 +49,3 @@ def order(request, pk):
             room = i
     context = {'room': room}
     return render(request, 'home/order.html', context)
-
-
-
-    ## modal start
-    def incident_list(request):
-        incidents = models.Incident.objects.all().order_by("-opened_at")[:10]
-        return render(request, "incident-list.html", locals())
-
-# View for the modal
-def incident_view(request, inc_number):
-    incident = get_object_or_404(models.Inc, inc_number=inc_number)
-    short_description = incident.short_description
-    return render(request, "incident.html", locals())
-    ## modal end
