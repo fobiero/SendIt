@@ -5,16 +5,17 @@
 <h1>details</h1>
 <ul style="list-style-type:none;">
 {% for customer in details %}
-    <li>Sender_firstname:  {{ customer.sender_fname }}</li>
-    <li>Sender_lastname: {{ customer.sender_lname }}</li>
-    <li>Sender_contact: {{ customer.sender_contact }}</li>
-    <li>Sender_location: {{ customer.sender_location }}</li><br>
-    <li>Parcel_description: {{ customer.parcel_description }}</li>
-    <li>Parcel_weight: {{ customer.parcel_weight }}</li><br>
-    <li>Receipient_firstname: {{ customer.receipient_fname }}</li>
-    <li>Receipient_lastname: {{ customer.receipient_lname }}</li>
-    <li>Receipient_contact: {{ customer.receipient_contact }}</li>
-    <li>Receipient_location: {{ customer.receipient_location }}</li>
+    <li>pickup_location: {{ customer.pickup_location }}</li><br>
+    <li>destination_location: {{ customer.destination_location }}</li><br>
+    <li>Sender_contact: {{ customer.sender_contact }}</li><br>
+    <li>Receipient_name: {{ customer.receipient_name }}</li><br>
+    <li>Receipient_contact: {{ customer.receipient_contact }}</li><br>
+    <li>Parcel_packages: {{ customer.parcel_package }}</li><br>
+
+    <!-- <li>Sender_firstname:  {{ customer.sender_fname }}</li> -->
+    <!-- <li>Sender_lastname: {{ customer.sender_lname }}</li> -->
+    <!-- <li>Parcel_description: {{ customer.parcel_description }}</li> -->
+    <!-- <li>Receipient_lastname: {{ customer.receipient_lname }}</li> -->
 {% endfor %}
 </ul>
 {% endblock %}
