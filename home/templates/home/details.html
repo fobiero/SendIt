@@ -5,6 +5,7 @@
 <h1>details</h1>
 <ul style="list-style-type:none;">
 {% for customer in details %}
+    <li>{{ customer.id }}</li><br>
     <li>pickup_location: {{ customer.pickup_location }}</li><br>
     <li>destination_location: {{ customer.destination_location }}</li><br>
     <li>Sender_contact: {{ customer.sender_contact }}</li><br>
