@@ -3,18 +3,19 @@ from django.db import models
 # Create your models here.
 
 class Customer(models.Model):
-    sender_fname = models.CharField(max_length=200)
-    sender_lname = models.CharField(max_length=200)
-    sender_contact = models.CharField(max_length=200)
     LOCATION_CHOICES = (('Nairobi', 'Nairobi'), ('Mombasa', 'Mombasa'), ('Kisumu', 'Kisumu'), ('Embu', 'Embu'), ('Nakuru', 'Nakuru'))
-    sender_location = models.CharField(max_length=100, choices=LOCATION_CHOICES)
-    parcel_description = models.CharField(max_length=200)
-    WEIGHT_CHOICES = (('0-1 kgs', '0-1 kgs'), ('S', '2-5 kgs'), ('T', '6-10 kgs'))
-    parcel_weight = models.CharField(max_length=100, choices=WEIGHT_CHOICES)
-    receipient_fname = models.CharField(max_length=200)
-    receipient_lname = models.CharField(max_length=200)
+    pickup_location = models.CharField(max_length=100, choices=LOCATION_CHOICES)
+    destination_location = models.CharField(max_length=100, choices=LOCATION_CHOICES)
+    sender_contact = models.CharField(max_length=200)
+    receipient_name = models.CharField(max_length=200)
     receipient_contact = models.CharField(max_length=200)
-    receipient_location = models.CharField(max_length=100, choices=LOCATION_CHOICES)
+    PACKAGE_CHOICES = (('Small', 'Small'), ('Large', 'Large'))
+    parcel_packages = models.CharField(max_length=100, choices=PACKAGE_CHOICES)
+
+    # sender_fname = models.CharField(max_length=200)
+    # sender_lname = models.CharField(max_length=200)
+    # parcel_description = models.CharField(max_length=200)
+    # receipient_fname = models.CharField(max_length=200)
     
     def __str_(self):
         return self.first_name + ' ' + self.last_name
