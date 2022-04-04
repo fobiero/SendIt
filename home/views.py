@@ -19,3 +19,4 @@ def order(request):
 
 def details(request):
     return render(request, 'home/order.html')
+
