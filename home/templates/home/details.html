@@ -1,0 +1,17 @@
+<h3>view parcel details</h3>
+
+{% block content %}
+<h1>details</h1>
+<ul style="list-style-type:none;">
+    {% for customer in details %}
+    <li>{{ customer.id }}</li><br>
+    <li>pickup_location: {{ customer.pickup_location }}</li><br>
+    <li>destination_location: {{ customer.destination_location }}</li><br>
+    <li>Sender_contact: {{ customer.sender_contact }}</li><br>
+    <li>Receipient_name: {{ customer.receipient_name }}</li><br>
+    <li>Receipient_contact: {{ customer.receipient_contact }}</li><br>
+    <li>Parcel_packages: {{ customer.parcel_package }}</li><br> {% endfor %}
+</ul>
+{% endblock %}
+<br>
+<button type="button"><a href="/changedestination/">change parcel destination</a></button>

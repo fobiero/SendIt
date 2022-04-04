@@ -1,5 +1,9 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-
+<style>
+    .hero-section {
+        padding: 6rem 0;
+    }
+</style>
 <div class="hero-section p-4" style="align-items: center;">
     <div class="container">
         <div class="row">
@@ -11,7 +15,7 @@
             </div>
             <div class="col-md-6">
                 <div class="hero-banner">
-                    <img src="{% static 'images/hero/delivery.gif' %}" alt="" width="350px" height="300px">
+                    <img src="{% static 'images/hero/delivery.gif' %}" alt="">
                 </div>
             </div>
         </div>
@@ -19,27 +23,10 @@
 </div>
 <!-- end-hero  -->
 
-<!-- <section class="about" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="about-info">
-                    <h3 class="pg-tle">ABOUT US</h3>
-                    <h1>easier trade <br>for products delivery</h1>
-                    <p>We make trading easier <br> within a shorter period of time</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <img src="{% static 'images/products/prod.jpeg' %}" alt="">
-            </div>
-        </div>
-    </div>
-</section> -->
-
-<section class="service" id="products">
+<section class="service" id="products" style="margin: 4rem 0;">
     <div class="serv-info text-center">
-        <h1 class="h-tle">what we do</h1>
-        <p class="h-desc">We're helping online businesses grow and do more </p>
+        <h1 class="h-tle" style=" color: #ec8246; font-size: 2.3rem;">what we do</h1>
+        <p class="h-desc" style="font-size: 1.2rem;">We're helping online businesses grow and do more </p>
     </div>
     <div class="container">
         <div class="row">
@@ -95,15 +82,16 @@
     </div>
 </section>
 
-<section class="banner">
-    <h3 class="ser-tle">Start doing business with Us</h3>
-    <p>
+<section class="banner text-center p-3" style="background-color: #ec8246; color: #fff; ">
+    <h3 class="ser-tle p-3" style="font-size: 2.3rem; font-weight: 400;">Start doing business with Us</h3>
+    <p style="font-size: 1.1rem;">
         We bring together everything that's requested for E-commerce and customer brands to ship goods to consumers and retailers across Africa. <br>It's our mission to make trade easier
     </p>
-    <button class="get-started"><a href="#">get started</a></button>
+    <button class="get-started" style="border: none; padding: 1rem 4rem; color: #ec8246; margin: 2rem 0;"><a href="#" style="text-decoration: none; text-transform: uppercase; letter-spacing: .2rem; color: #ec8246;">get started</a></button>
 </section>
 
-<section class="faqs">
+<section class="faqs" style="padding: 4rem 0;">
+    <h3 class="ser-tle text-center" style="font-size: 2.3rem; font-weight: 400; color: #ec8246; margin-bottom: 2rem;">FAQ's</h3>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
