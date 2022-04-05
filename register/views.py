@@ -9,11 +9,11 @@ def register(response):
         form = RegisterForm(response.POST)
         if form.is_valid:
             form.save()
-        return redirect("/register/login.html")
+        return redirect("/login")
     else:
         form = RegisterForm()
     return render(response, "register/register.html", {"form":form})
 
 
 def login(response):
-    return render(response, '/register/login.html')
+    return render(response, '/registration/login.html')
