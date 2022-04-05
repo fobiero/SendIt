@@ -18,5 +18,5 @@ def order(request):
     return render (request, 'home/order.html')
 
 def details(request):
-    return render(request, 'home/order.html')
+    return render(request, 'home/details.html')
 
