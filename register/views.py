@@ -13,3 +13,7 @@ def register(response):
     else:
         form = RegisterForm()
     return render(response, "register/register.html", {"form":form})
+
+
+def login(response):
+    return render(response, '/register/login.html')
