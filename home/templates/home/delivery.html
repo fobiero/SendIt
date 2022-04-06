@@ -1,4 +1,4 @@
-{% load crispy_forms_tags %}
+{% extends 'base.html' %}{% load crispy_forms_tags %}
 
 <html lang="en">
 
@@ -52,10 +52,31 @@
 
 </head>
 
-<body style="padding: 20px;">
-
+<body>
+    {% block content %}
     <div class="container">
-        <h2>delivery page</h2>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h2>Place Order</h2>
+                <!-- <small class="muted">Please fill the form below!</small> -->
+                <!-- <h3>Customer form</h3> -->
+                <p class="muted">Need to deliver a parcel? Please fill in the form below</p>
+                <hr>
+                <form action="" method="post">
+                    {% csrf_token %} {{ form|crispy }}
+                    <br>
+                    <button class="btn btn-outline-info" type="submit">Place Order</button>
+                    <!-- <a href="/details/">Order details</a> -->
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        {% endblock content %}
+
+        <!-- end clean code  -->
+
+        <!-- <h2>delivery page</h2>
         <h3>Customer form</h3>
         <p>need to deliver a parcel, fill in the form below</p>
         <hr>
@@ -66,19 +87,14 @@
                 <br>
                 <button id="myBtn" type="submit" class="btn btn-success" onclick="submitForm()">Order Parcel</button>
             </form>
-
-            <!--modal start-->
-            <!-- The Modal -->
             <div id="myModal" class="modal">
-                <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <p>Order placed successfully!</p>
                 </div>
             </div>
-            <!--modal end-->
             <a href="/details/">Order details</a>
-        </div>
+        </div> -->
     </div>
 
     <script>
