@@ -1,19 +1,10 @@
-{% extends 'base.html' %}{% load crispy_forms_tags %}
+{% extends 'base.html' %}
 <!-- content  -->
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <h3>view parcel details</h3>
-            <h1>details</h1>
-            {% for detail in details%}
-            <p>Pick-Up : {{detail.pickup_location}}</p>
-            <p>Destination : {{detail.destination_location}}</p>
-            {% endfor %}
-        </div>
-    </div>
-    <button type="button "><a href="/changedestination/ ">change parcel destination</a></button>
-</div>
+
+<!-- create table  -->
+
+
 <!-- end block  -->
 {% endblock content %}
 <br>

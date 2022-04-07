@@ -40,7 +40,6 @@ def order(request):
 
 
 def changedestination(request):
-    pass
 
     return render(request, 'home/details.html')
 

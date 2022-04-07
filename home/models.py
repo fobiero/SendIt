@@ -27,7 +27,6 @@ class newdestination(models.Model):
     def __str_(self):
         return self
 
-
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
