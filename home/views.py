@@ -22,15 +22,12 @@ def delivery(response):
         form = CustomerForm(response.POST)
         if form.is_valid:
             form.save()
-        return redirect("/home")
+        return redirect("/details")
     else:
         form = CustomerForm()
     return render(response, "home/delivery.html", {"form":form})
 
-
-def order(request):
-    return render (request, 'home/order.html')
-
+# @TODO: Change fetch Customer details 
 def details(request):
     details = Customer.objects.all()
     
@@ -38,8 +35,14 @@ def details(request):
     {'details': details})
 
 
+def order(request):
+    return render (request, 'home/order.html')
+
+
 def changedestination(request):
     pass
 
-    # return render(request, 'home/details.html')
+    return render(request, 'home/details.html')
+
+
 
