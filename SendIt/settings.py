@@ -83,7 +83,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sendit',
-        'USER': 'moringa',
+        'USER': 'postgres',
         'PASSWORD':'root',
         'HOST':'127.0.0.1'
     }
